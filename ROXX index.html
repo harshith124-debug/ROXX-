@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVENTIQ | Intelligent Event Management</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #080d1c;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #10182c;
+    border-bottom: 1px solid #26314c;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #7c9cff;
+}
+
+nav a {
+    color: #d1d8e9;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #7c9cff;
+}
+
+.hero {
+    padding: 100px 8%;
+    text-align: center;
+    background: linear-gradient(135deg,#101a38,#171d40,#10182c);
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #829eff;
+}
+
+.hero p {
+    color: #b5bfd5;
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+button {
+    background: #718fff;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 7px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #526fe0;
+}
+
+.container {
+    padding: 60px 8%;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #151f35;
+    border: 1px solid #293653;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    color: #aab8d6;
+    font-size: 15px;
+}
+
+.card h2 {
+    margin-top: 15px;
+    font-size: 30px;
+    color: #829eff;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.feature {
+    background: #151f35;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #293653;
+}
+
+.feature h3 {
+    color: #829eff;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #b5bfd5;
+    line-height: 1.6;
+}
+
+.form-box {
+    background: #151f35;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    background: #0c1428;
+    border: 1px solid #354463;
+    border-radius: 6px;
+    color: white;
+}
+
+.result {
+    margin-top: 20px;
+    color: #8fa9ff;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #10182c;
+    color: #9ba9c5;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">EVENTIQ.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#features">Features</a>
+        <a href="#create">Create Event</a>
+        <a href="#simulator">Simulator</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Plan Smarter.<br><span>Manage Better.</span></h1>
+
+    <p>
+        EVENTIQ is an intelligent event management and resource
+        optimisation platform designed to simplify event planning,
+        improve resource allocation and support smarter decisions.
+    </p>
+
+    <button onclick="document.getElementById('create').scrollIntoView({behavior:'smooth'})">
+        Get Started →
+    </button>
+</section>
+
+<section class="container" id="dashboard">
+
+    <h2 class="section-title">Dashboard Overview</h2>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>Total Events</h3>
+            <h2 id="totalEvents">12</h2>
+        </div>
+
+        <div class="card">
+            <h3>Resources Available</h3>
+            <h2>48</h2>
+        </div>
+
+        <div class="card">
+            <h3>Budget Allocated</h3>
+            <h2>₹2.5L</h2>
+        </div>
+
+        <div class="card">
+            <h3>Efficiency Score</h3>
+            <h2>92%</h2>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="features">
+
+    <h2 class="section-title">Platform Features</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>📅 Smart Event Scheduling</h3>
+            <p>Organise events, manage dates and avoid scheduling conflicts.</p>
+        </div>
+
+        <div class="feature">
+            <h3>📦 Resource Optimisation</h3>
+            <p>Manage venues, equipment, volunteers and other event resources.</p>
+        </div>
+
+        <div class="feature">
+            <h3>💰 Budget Management</h3>
+            <p>Track event expenses and monitor budget utilisation.</p>
+        </div>
+
+        <div class="feature">
+            <h3>📊 Performance Analytics</h3>
+            <p>Understand event performance through useful statistics.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🧠 Intelligent Recommendations</h3>
+            <p>Get rule-based suggestions to improve event planning.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔮 What-If Simulator</h3>
+            <p>Explore alternative event scenarios before making decisions.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="create">
+
+    <h2 class="section-title">Create Your Event</h2>
+
+    <div class="form-box">
+
+        <input type="text" id="eventName" placeholder="Event Name">
+
+        <input type="date" id="eventDate">
+
+        <select id="eventType">
+            <option value="">Select Event Type</option>
+            <option>Conference</option>
+            <option>Workshop</option>
+            <option>College Fest</option>
+            <option>Seminar</option>
+            <option>Sports Event</option>
+        </select>
+
+        <input type="number" id="attendees" placeholder="Expected Attendees">
+
+        <button onclick="createEvent()">Create Event</button>
+
+        <div class="result" id="eventResult"></div>
+
+    </div>
+</section>
+
+<section class="container" id="simulator">
+
+    <h2 class="section-title">🔮 What-If Event Simulator</h2>
+
+    <div class="form-box">
+
+        <p style="color:#b5bfd5">
+            Explore how changes in attendance affect your event budget.
+        </p>
+
+        <input type="number" id="people" placeholder="Expected Attendees">
+
+        <input type="number" id="cost" placeholder="Cost Per Attendee (₹)">
+
+        <button onclick="simulate()">Run Simulation</button>
+
+        <div class="result" id="simulationResult"></div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 EVENTIQ | Intelligent Event Management & Resource Optimisation</p>
+    <p style="margin-top:10px">Designed for smarter event planning.</p>
+</footer>
+
+<script>
+
+let events = 12;
+
+function createEvent() {
+
+    let name = document.getElementById("eventName").value;
+    let date = document.getElementById("eventDate").value;
+    let type = document.getElementById("eventType").value;
+    let attendees = document.getElementById("attendees").value;
+
+    if(!name || !date || !type || !attendees || Number(attendees) <= 0) {
+        alert("Please fill all fields correctly!");
+        return;
+    }
+
+    events++;
+
+    document.getElementById("totalEvents").innerText = events;
+
+    document.getElementById("eventResult").innerHTML =
+        "✅ Event Created Successfully!<br>" +
+        "Event: " + name + "<br>" +
+        "Date: " + date + "<br>" +
+        "Type: " + type + "<br>" +
+        "Expected Attendees: " + attendees;
+
+}
+
+function simulate() {
+
+    let people = Number(document.getElementById("people").value);
+    let cost = Number(document.getElementById("cost").value);
+
+    if(people <= 0 || cost <= 0) {
+        alert("Enter valid attendance and cost values!");
+        return;
+    }
+
+    let budget = people * cost;
+
+    let extraBudget = budget * 0.10;
+
+    document.getElementById("simulationResult").innerHTML =
+        "📊 Simulation Results<br>" +
+        "Expected Attendees: " + people + "<br>" +
+        "Estimated Budget: ₹" + budget.toLocaleString("en-IN") + "<br>" +
+        "Recommended 10% Reserve: ₹" + extraBudget.toLocaleString("en-IN") + "<br>" +
+        "Total Suggested Budget: ₹" + (budget + extraBudget).toLocaleString("en-IN");
+
+}
+
+</script>
+
+</body>
+</html>
